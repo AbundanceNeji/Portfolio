@@ -127,9 +127,15 @@ USE_TZ = True
 
 import os
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'productionfiles'      #Whitenoise Serves the static files when DEBUG is False
+MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
 STATICFILES_DIRS = [
-    BASE_DIR / 'mystaticfiles'
+    os.path.join(BASE_DIR, 'static')
 ]
 
 
