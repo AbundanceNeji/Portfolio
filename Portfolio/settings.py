@@ -126,11 +126,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 import os
-STATIC_ROOT = BASE_DIR / 'productionfiles'      #Whitenoise Serves the static files when DEBUG is False
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'productionfiles'      #Whitenoise Serves the static files when DEBUG is False
 STATICFILES_DIRS = [
     BASE_DIR / 'mystaticfiles'
 ]
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
