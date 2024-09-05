@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 
 
 
-# PGPASSWORD=bqoKxKMHnaNlciBSSfgfLYnJMrcqzuvC psql -h junction.proxy.rlwy.net -U postgres -p 26084 -d railway
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'bqoKxKMHnaNlciBSSfgfLYnJMrcqzuvC',
